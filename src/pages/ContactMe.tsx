@@ -1,8 +1,6 @@
-import React from 'react'
 
-type Props = {}
 
-const ContactMe = (props: Props) => {
+const ContactMe = () => {
   return (
     <div className='space-y-4'>
       <p className="text-3xl font-bold sticky top-10 bg-white left-0 right-0 ">Contact Me</p>
