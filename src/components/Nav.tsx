@@ -1,10 +1,12 @@
-import React from 'react'
+import { Link } from "react-router-dom"
 
-type Props = {}
-
-const Nav = (props: Props) => {
+const Nav = () => {
   return (
-    <div>Nav</div>
+    <div className=" sm:text-xl flex *:tracking-wider justify-around sm:justify-center sm:gap-40 p-4">
+      <Link to="/about">ABOUT ME</Link>
+      <Link to="/my-work">MY WORK</Link>
+      <Link to="/contact-me">CONTACT ME</Link>
+    </div>
   )
 }
 
