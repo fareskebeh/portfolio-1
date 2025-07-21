@@ -10,6 +10,7 @@ import expoIcon from "../assets/icons/expo.svg"
 import surgeIcon from "../assets/icons/surge.svg"
 import vercelIcon from "../assets/icons/vercel.svg"
 import krakenIcon from "../assets/icons/kraken.svg"
+import tailwindIcon from "../assets/icons/tailwind.svg"
 
 
 type Technology = {
@@ -32,6 +33,12 @@ const Stack = () => {
         {
             name: "expo",
             icon: expoIcon,
+            purpose:"frontend",
+            color:""
+        },
+         {
+            name: "tailwind",
+            icon: tailwindIcon,
             purpose:"frontend",
             color:""
         },
