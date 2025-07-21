@@ -7,16 +7,15 @@ import Nav from "./components/Nav"
 
 const App = () => {
   return (
-    <div>
+    <div className="flex flex-col md:flex-row">
     <Router>
       <Nav/>
       <Card/>
 
       <Routes>
-        
-        <Route path="/about" element={< About/>}/>
-        <Route path="/my-work" element={< MyWork/>}/>
-        <Route path="/contact-me" element={< ContactMe/>}/>
+        <Route path="/about" element={<div className="sm:pt-20 px-8"> <About/> </div> }/>
+        <Route path="/my-work" element=   {<div className="sm:pt-20 px-8">< MyWork/></div>}/>
+        <Route path="/contact-me" element={<div className="sm:pt-20 px-8">< ContactMe/></div>}/>
         <Route path="*" element={<Navigate to="/about"/>}/>
       </Routes>
     </Router>
