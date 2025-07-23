@@ -4,6 +4,10 @@
     src: url(./assets/Inter/Inter-VariableFont_opszwght.ttf);
 }
 
+body {
+    background: #000;
+}
+
 @theme {
     --font-inter: Inter;
 }
