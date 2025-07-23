@@ -17,7 +17,6 @@ type Technology = {
     name: string;
     icon: string;
     purpose: string;
-    color: string;
 }
 
 
@@ -25,82 +24,69 @@ type Technology = {
 const Stack = () => {
     const technologies : Technology[] = [
         {
-            name: "react",
+            name: "React",
             icon: reactIcon,
             purpose:"frontend",
-            color:""
         },
         {
-            name: "expo",
+            name: "Expo",
             icon: expoIcon,
             purpose:"frontend",
-            color:""
         },
          {
-            name: "tailwind",
+            name: "TailwindCSS",
             icon: tailwindIcon,
             purpose:"frontend",
-            color:""
         },
         {
-            name: "git",
+            name: "Git",
             icon: gitIcon,
             purpose:"cicd",
-            color:""
         },
         {
-            name: "python",
+            name: "Python",
             icon: pythonIcon,
             purpose:"backend",
-            color:""
         },
         {
-            name: "supabase",
+            name: "Supabase",
             icon: supabaseIcon,
             purpose:"backend",
-            color:""
         },
         {
-            name: "js",
+            name: "JavaScript",
             icon: jsIcon,
             purpose:"frontend",
-            color:""
         },
         {
-            name: "ts",
+            name: "TypeScript",
             icon: tsIcon,
             purpose:"frontend",
-            color:""
         },
         {
-            name: "django",
+            name: "Django",
             icon: djangoIcon,
             purpose:"backend",
-            color:""
         },
         {
-            name: "redux",
+            name: "Redux",
             icon: reduxIcon,
             purpose:"frontend",
-            color:""
         },
         {
-            name: "surge",
+            name: "Surge",
             icon: surgeIcon,
             purpose:"hosting",
-            color:""
         },
         {
-            name: "vercel",
+            name: "Vercel",
             icon: vercelIcon,
             purpose:"hosting",
-            color:""
         },
         {
-            name: "gitkraken",
+            name: "Gitkraken",
             icon: krakenIcon,
             purpose:"cicd",
-            color:""
         },
     ]
 
@@ -110,38 +96,43 @@ const Stack = () => {
     const host: Technology[] = technologies.filter(tech=> tech.purpose === "hosting")
 
   return (
-    <div className=" rounded-xl p-4 space-y-4">
-        <p>FRONTEND</p>
-        <div className="flex gap-4 *:w-25 flex-wrap">
+    <div className="bg-neutral-800 rounded-2xl p-4 space-y-4">
+        <p className="text-xl bg-neutral-700 p-2 rounded-xl">FRONTEND</p>
+        <div className={`*:cursor-pointer **:transition duration-300 hover:bg flex gap-4 *:w-25 flex-wrap`}>
             {frontend.map((f, index)=> (
-                <div key={index}>
+                <div className="group hover:-translate-y-1" key={index}>
                     <img src={f.icon}/>
+                    <p className="group-hover:animate-pulse opacity-0 group-hover:translate-y-1 group-hover:opacity-100 text-center">{f.name}</p>
                 </div>
             ))}
         </div>
-        <p>BACKEND</p>
-        <div className="flex gap-4 *:w-30">
+
+        <p className="text-xl bg-neutral-700 p-2 rounded-xl">BACKEND</p>
+        <div className={`*:cursor-pointer **:transition duration-200 hover:bg flex gap-4 *:w-25 flex-wrap`}>
             {backend.map((b, index)=> (
-                <div key={index}>
+                <div className="group hover:-translate-y-1" key={index}>
                     <img src={b.icon}/>
+                    <p className="opacity-0 group-hover:translate-y-1 group-hover:opacity-100 text-center">{b.name}</p>
                 </div>
             ))}
         </div>
 
-        <p>CI/CD</p>
-        <div className="flex gap-4 *:w-30">
+        <p className="text-xl bg-neutral-700 p-2 rounded-xl">CI/CD</p>
+        <div className={`*:cursor-pointer **:transition duration-200 hover:bg flex gap-4 *:w-25 flex-wrap`}>
             {cicd.map((c, index)=> (
-                <div key={index}>
+                <div className="group hover:-translate-y-1" key={index}>
                     <img src={c.icon}/>
+                    <p className="opacity-0 group-hover:translate-y-1 group-hover:opacity-100 text-center">{c.name}</p>
                 </div>
             ))}
         </div>
 
-        <p>CI/CD</p>
-        <div className="flex gap-4 *:w-30">
+        <p className="text-xl bg-neutral-700 p-2 rounded-xl">HOSTING</p>
+        <div className={`*:cursor-pointer **:transition duration-200 hover:bg flex gap-4 *:w-25 flex-wrap`}>
             {host.map((h, index)=> (
-                <div key={index}>
+                <div className="group hover:-translate-y-1" key={index}>
                     <img src={h.icon}/>
+                    <p className="opacity-0 group-hover:translate-y-1 group-hover:opacity-100 text-center">{h.name}</p>
                 </div>
             ))}
         </div>

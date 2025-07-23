@@ -23,20 +23,20 @@ const About = () => {
   ] 
 
   return (
-    <div className='flex flex-col gap-4 space-y-4'>
-      <p className='text-3xl font-bold sticky top-10 bg-white left-0 right-0'>About Me</p>
+    <div className='flex text-white flex-col gap-4 space-y-4 bg-black'>
+      <p className='text-3xl font-bold sticky top-13 bg-black text-white left-0 right-0'>About Me</p>
       
       <div className="px-2 space-y-4">
         {
           aboutSections.map((about,index)=>(
             <Fragment key={index}>
-            <p className="text-2xl font-bold">{about.title}</p>
+            <p className="text-2xl sticky top-22 bg-black font-bold">{about.title}</p>
             <div className="text-xl">
               {
                
 
                 about.content.map((c,index)=> (
-                  <p key={index} className="my-8">{c}</p>
+                  <p key={index} className="my-8 text-neutral-400">{c}</p>
                 )) 
 
               
