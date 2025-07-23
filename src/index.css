@@ -1,13 +1,17 @@
 @import "tailwindcss";
 @font-face {
-    font-family: "Inter";
-    src: url(./assets/Inter/Inter-VariableFont_opszwght.ttf);
+  font-family: "Inter";
+  src: url(./assets/Inter/Inter-VariableFont_opszwght.ttf);
 }
 
 body {
-    background: #000;
+  background: #000;
+}
+
+body::-webkit-scrollbar {
+  display: none;
 }
 
 @theme {
-    --font-inter: Inter;
+  --font-inter: Inter;
 }
