@@ -7,7 +7,7 @@ import jsIcon from "../assets/icons/js.svg";
 import tsIcon from "../assets/icons/ts.svg";
 import djangoIcon from "../assets/icons/django.svg";
 import tailwindIcon from "../assets/icons/tailwind.svg";
-import githubIcon from "../assets/icons/github.svg"
+import githubIcon from "../assets/icons/github.svg";
 
 type Project = {
   name: string;
@@ -93,22 +93,25 @@ const Timeline = () => {
         {projects.map((p, index) => (
           <div className="p-4 space-y-8 bg-neutral-900 rounded-xl" key={index}>
             <div className="flex items-center justify-between">
-            <p className="text-2xl font-bold">{p.name}</p>
-            <img className="w-10" src={p.purpose === "prod" ? star:sword}/>
+              <p className="text-2xl font-bold text-white">{p.name}</p>
+              <img className="w-10" src={p.purpose === "prod" ? star : sword} />
             </div>
             <p>{p.description}</p>
-            <div className="flex justify-between items-center px-2">
-            <div className="*:w-15 flex gap-4">
-            {p.technologies.map((t, index) => (
-              <img key={index} src={t} />
-            ))}
-            </div>
+            <div className="flex justify-between flex-col sm:flex-row gap-4 items-start sm:items-center px-2">
+              <div className="*:w-15 flex gap-4">
+                {p.technologies.map((t, index) => (
+                  <img key={index} src={t} />
+                ))}
+              </div>
 
-            <a href={p.link} className="p-2 flex text-black bg-white rounded-xl gap-2 font-bold hover:opacity-90 active:opacity-80 transition duration-200" target="_blank">
-              <img className="w-4" src={githubIcon}/>
-              View Code
-            </a>
-
+              <a
+                href={p.link}
+                className="p-2 flex text-black bg-white rounded-xl gap-2 font-bold hover:opacity-90 active:opacity-80 transition duration-200"
+                target="_blank"
+              >
+                <img className="w-4" src={githubIcon} />
+                View Code
+              </a>
             </div>
           </div>
         ))}
