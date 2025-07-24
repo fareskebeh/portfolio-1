@@ -97,6 +97,7 @@ const Timeline = () => {
               <img className="w-10" src={p.purpose === "prod" ? star : sword} />
             </div>
             <p>{p.description}</p>
+            <p className={p.state==="Stopped" ? "text-red-400" : p.state==="Completed" ? "text-emerald-400" : "text-amber-300"}>{p.state}</p>
             <div className="flex justify-between flex-col sm:flex-row gap-4 items-start sm:items-center px-2">
               <div className="*:w-15 flex gap-4">
                 {p.technologies.map((t, index) => (
