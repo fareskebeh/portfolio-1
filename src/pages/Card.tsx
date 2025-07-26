@@ -47,7 +47,7 @@ const item = {
   ];
 
   return (
-    <div className="bg-black text-white pt-14 px-8 sm:fixed top-0 h-100 sm:h-auto left-0 bottom-0 right-1/2 flex flex-col justify-center">
+    <div className=" text-white pt-14 px-8 sm:fixed top-0 h-100 sm:h-auto left-0 bottom-0 right-1/2 flex flex-col justify-center">
       <div className="space-y-8 sm:space-y-12">
         <div className="space-y-2 sm:space-y-4">
           <SplitText text="Fares Kebbeh"

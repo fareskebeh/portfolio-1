@@ -11,6 +11,7 @@ import surgeIcon from "../assets/icons/surge.svg"
 import vercelIcon from "../assets/icons/vercel.svg"
 import krakenIcon from "../assets/icons/kraken.svg"
 import tailwindIcon from "../assets/icons/tailwind.svg"
+import {motion} from "framer-motion"
 
 
 type Technology = {
@@ -96,44 +97,44 @@ const Stack = () => {
     const host: Technology[] = technologies.filter(tech=> tech.purpose === "hosting")
 
   return (
-    <div className="bg-neutral-800 rounded-2xl p-4 space-y-4">
-        <p className="text-xl bg-neutral-700 p-2 rounded-xl">FRONTEND</p>
+    <div className="bg-neutral-950 rounded-2xl p-4 space-y-4">
+        <p className="text-xl bg-neutral-900 p-2 rounded-xl">FRONTEND</p>
         <div className={`*:cursor-pointer **:transition duration-300 hover:bg flex gap-4 *:w-25 flex-wrap`}>
             {frontend.map((f, index)=> (
-                <div className="group hover:-translate-y-1" key={index}>
+                <motion.div initial={{opacity:0, y:-20}} whileInView={{opacity:1, y:0}} className="group hover:-translate-y-1" key={index}>
                     <img src={f.icon}/>
                     <p className="group-hover:animate-pulse opacity-0 group-hover:translate-y-1 group-hover:opacity-100 text-center">{f.name}</p>
-                </div>
+                </motion.div>
             ))}
         </div>
 
-        <p className="text-xl bg-neutral-700 p-2 rounded-xl">BACKEND</p>
+        <p className="text-xl bg-neutral-900 p-2 rounded-xl">BACKEND</p>
         <div className={`*:cursor-pointer **:transition duration-200 hover:bg flex gap-4 *:w-25 flex-wrap`}>
             {backend.map((b, index)=> (
-                <div className="group hover:-translate-y-1" key={index}>
+                 <motion.div initial={{opacity:0, y:-20}} whileInView={{opacity:1, y:0}} className="group hover:-translate-y-1" key={index}>
                     <img src={b.icon}/>
-                    <p className="opacity-0 group-hover:translate-y-1 group-hover:opacity-100 text-center">{b.name}</p>
-                </div>
+                    <p className="group-hover:animate-pulse opacity-0 group-hover:translate-y-1 group-hover:opacity-100 text-center">{b.name}</p>
+                </motion.div>
             ))}
         </div>
 
-        <p className="text-xl bg-neutral-700 p-2 rounded-xl">CI/CD</p>
+        <p className="text-xl bg-neutral-900 p-2 rounded-xl">CI/CD</p>
         <div className={`*:cursor-pointer **:transition duration-200 hover:bg flex gap-4 *:w-25 flex-wrap`}>
             {cicd.map((c, index)=> (
-                <div className="group hover:-translate-y-1" key={index}>
+                 <motion.div initial={{opacity:0, y:-20}} whileInView={{opacity:1, y:0}} className="group hover:-translate-y-1" key={index}>
                     <img src={c.icon}/>
-                    <p className="opacity-0 group-hover:translate-y-1 group-hover:opacity-100 text-center">{c.name}</p>
-                </div>
+                    <p className="group-hover:animate-pulse opacity-0 group-hover:translate-y-1 group-hover:opacity-100 text-center">{c.name}</p>
+                </motion.div>
             ))}
         </div>
 
-        <p className="text-xl bg-neutral-700 p-2 rounded-xl">HOSTING</p>
+        <p className="text-xl bg-neutral-900 p-2 rounded-xl">HOSTING</p>
         <div className={`*:cursor-pointer **:transition duration-200 hover:bg flex gap-4 *:w-25 flex-wrap`}>
             {host.map((h, index)=> (
-                <div className="group hover:-translate-y-1" key={index}>
+                 <motion.div initial={{opacity:0, y:-20}} whileInView={{opacity:1, y:0}} className="group hover:-translate-y-1" key={index}>
                     <img src={h.icon}/>
-                    <p className="opacity-0 group-hover:translate-y-1 group-hover:opacity-100 text-center">{h.name}</p>
-                </div>
+                    <p className="group-hover:animate-pulse opacity-0 group-hover:translate-y-1 group-hover:opacity-100 text-center">{h.name}</p>
+                </motion.div>
             ))}
         </div>
     </div>

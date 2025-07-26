@@ -4,9 +4,23 @@
   src: url(./assets/Inter/Inter-VariableFont_opszwght.ttf);
 }
 
+@keyframes shine {
+  0% {
+    background-position: 100%;
+  }
+  100% {
+    background-position: -100%;
+  }
+}
+
+.animate-shine {
+  animation: shine 5s linear infinite;
+}
+
 body {
   background: #000;
 }
+
 
 *::-webkit-scrollbar {
   display: none;
