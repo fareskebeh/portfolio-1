@@ -97,8 +97,8 @@ const Stack = () => {
     const host: Technology[] = technologies.filter(tech=> tech.purpose === "hosting")
 
   return (
-    <div className="bg-neutral-950 rounded-2xl p-4 space-y-4">
-        <p className="text-xl bg-neutral-900 p-2 rounded-xl">FRONTEND</p>
+    <div className="backdrop-blur-2xl rounded-2xl p-4 space-y-4 border border-neutral-600">
+        <p className="text-xl p-2 tracking-widest rounded-xl">FRONTEND</p>
         <div className={`*:cursor-pointer **:transition duration-300 hover:bg flex gap-4 *:w-25 flex-wrap`}>
             {frontend.map((f, index)=> (
                 <motion.div initial={{opacity:0, y:-20}} whileInView={{opacity:1, y:0}} className="group hover:-translate-y-1" key={index}>
@@ -108,7 +108,7 @@ const Stack = () => {
             ))}
         </div>
 
-        <p className="text-xl bg-neutral-900 p-2 rounded-xl">BACKEND</p>
+        <p className="text-xl p-2 tracking-widest rounded-xl">BACKEND</p>
         <div className={`*:cursor-pointer **:transition duration-200 hover:bg flex gap-4 *:w-25 flex-wrap`}>
             {backend.map((b, index)=> (
                  <motion.div initial={{opacity:0, y:-20}} whileInView={{opacity:1, y:0}} className="group hover:-translate-y-1" key={index}>
@@ -118,7 +118,7 @@ const Stack = () => {
             ))}
         </div>
 
-        <p className="text-xl bg-neutral-900 p-2 rounded-xl">CI/CD</p>
+        <p className="text-xl p-2 tracking-widest rounded-xl">CI/CD</p>
         <div className={`*:cursor-pointer **:transition duration-200 hover:bg flex gap-4 *:w-25 flex-wrap`}>
             {cicd.map((c, index)=> (
                  <motion.div initial={{opacity:0, y:-20}} whileInView={{opacity:1, y:0}} className="group hover:-translate-y-1" key={index}>
@@ -128,7 +128,7 @@ const Stack = () => {
             ))}
         </div>
 
-        <p className="text-xl bg-neutral-900 p-2 rounded-xl">HOSTING</p>
+        <p className="text-xl p-2 tracking-widest rounded-xl">HOSTING</p>
         <div className={`*:cursor-pointer **:transition duration-200 hover:bg flex gap-4 *:w-25 flex-wrap`}>
             {host.map((h, index)=> (
                  <motion.div initial={{opacity:0, y:-20}} whileInView={{opacity:1, y:0}} className="group hover:-translate-y-1" key={index}>

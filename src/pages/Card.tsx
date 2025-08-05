@@ -34,15 +34,15 @@ const item = {
     },
     {
       icon: twitterIcon,
-      link: "",
+      link: "https://twitter.com/FaresKebeh?t=LPZznMy9_uB6lO0suNOmVw&s=09",
     },
     {
       icon: instaIcon,
-      link: "",
+      link: "https://www.instagram.com/fares.kbh?igsh=emF2czB5Y3k5dDFj",
     },
     {
       icon: mailIcon,
-      link: "mailto:fares_kebbeh@outlook.com",
+      link: "mailto:fares.kebbeh@gmail.com",
     },
   ];
 
@@ -65,14 +65,12 @@ const item = {
           <p className="text-2xl font-bold">Full-Stack Engineer</p>
           <TextType
             text={[
-              "Code should feel like a conversation, not a puzzle",
-              "Sometimes it's about elegance, sometimes just grit",
-              "I've broken things more times than I'd like to admit",
-              "But that's how you learn what truly matters",
-              "Simplicity, clarity, and care, that's the goal",
+              "I build responsive, performant web/mobile apps",
+              "Shipped scalable apps under tight deadlines",
+              "Attentive to detail, Self-taught",
             ]}
             typingSpeed={30}
-            pauseDuration={1500}
+            pauseDuration={3000}
             showCursor={true}
             cursorCharacter="_"
             className="text-xl text-neutral-400 w-[75%]"

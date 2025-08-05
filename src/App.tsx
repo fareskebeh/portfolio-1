@@ -49,7 +49,7 @@ const AnimatedRoutes = () => {
               animate={{ opacity: 1, x: 0 }}
               exit={{ opacity: 0, x: -60 }}
               transition={{ duration: 0.2 }}
-              className="sm:py-20 px-8 sm:absolute   flex items-center right-0 top-0 bottom-0 left-1/2"
+              className="sm:py-20 px-8 sm:absolute   right-0 top-0 bottom-0 left-1/2"
             >
               <ContactMe />
             </motion.div>
@@ -64,8 +64,8 @@ const AnimatedRoutes = () => {
 const App = () => {
   return (
     <Router>
-      <div className="flex relative flex-col md:flex-row">
-        <div style={{backgroundImage: `url(${bg})`}} className={`bg-cover brightness-15 fixed -z-10 inset-0`}/>
+      <div className="flex **:selection:bg-neutral-300 **:selection:text-black relative flex-col md:flex-row">
+        <div style={{backgroundImage: `url(${bg})`}} className={`bg-cover bg-center brightness-30 fixed -z-10 inset-0`}/>
         <Nav />
         <Card />
         <AnimatedRoutes />

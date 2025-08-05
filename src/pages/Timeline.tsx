@@ -92,7 +92,7 @@ const Timeline = () => {
 
       <div className="border-l-4 border-l-neutral-700 pl-4 space-y-4">
         {projects.map((p, index) => (
-          <motion.div initial={{opacity:0, x:-40}} whileInView={{opacity:1, x:0}} transition={{duration:0.4}} className="p-4 space-y-8 backdrop-blur-sm rounded-xl" key={index}>
+          <motion.div initial={{opacity:0, x:-40}} whileInView={{opacity:1, x:0}} transition={{duration:0.4}} className="p-4 space-y-8 backdrop-blur-2xl border border-neutral-600 rounded-xl" key={index}>
             <div className="flex items-center justify-between">
               <p className="text-2xl font-bold text-white">{p.name}</p>
               <img className="w-10" src={p.purpose === "prod" ? star : sword} />

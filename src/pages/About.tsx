@@ -47,14 +47,14 @@ const About = () => {
 
   return (
     <div className="flex text-white flex-col gap-4 space-y-4  ">
-      <p className="z-40 text-3xl font-bold sticky top-13 bg-black text-white left-0 right-0">
+      <p className="z-40 text-3xl font-bold sticky top-13 bg-[#494949] text-white left-0 right-0">
         About Me
       </p>
 
       <div className="px-2 space-y-4">
         {aboutSections.map((about, index) => (
           <Fragment key={index}>
-            <p className="text-2xl sticky top-22  bg-black font-bold">{about.title}</p>
+            <p className="text-2xl top-22  font-bold">{about.title}</p>
             <motion.div
               initial="hidden"
               animate="show"
