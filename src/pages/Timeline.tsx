@@ -1,12 +1,5 @@
 import sword from "../assets/icons/sword.png";
 import star from "../assets/icons/star.png";
-import reactIcon from "../assets/icons/react.svg";
-import pythonIcon from "../assets/icons/python.svg";
-import supabaseIcon from "../assets/icons/supabase.svg";
-import jsIcon from "../assets/icons/js.svg";
-import tsIcon from "../assets/icons/ts.svg";
-import djangoIcon from "../assets/icons/django.svg";
-import tailwindIcon from "../assets/icons/tailwind.svg";
 import githubIcon from "../assets/icons/github.svg";
 import {motion} from "framer-motion"
 
@@ -27,7 +20,7 @@ const Timeline = () => {
       name: "Gold Street",
       description:
         "I built an SaaS for a trading agency, with private channel handling using TelegramAPI",
-      technologies: [reactIcon, tailwindIcon, supabaseIcon, pythonIcon],
+      technologies: ["React", "TailwindCSS", "Supabase", "Python"],
       startDate: "27-June-2025",
       image: "goldstreet",
       state: "Completed",
@@ -38,7 +31,7 @@ const Timeline = () => {
       name: "Tutorme",
       description:
         "I'm currently building the frontend for a tutoring web app, the app contains a chat feature, so far my biggest project",
-      technologies: [reactIcon, tailwindIcon, tsIcon],
+      technologies: ["React", "TailwindCSS", "TypeScript"],
       startDate: "18-June-2025",
       image: "tutorme",
       state: "In Progress..",
@@ -49,7 +42,7 @@ const Timeline = () => {
       name: "Rigsy",
       description:
         "My only scalable full-stack app, currently abandoned due to other current overriding projects",
-      technologies: [reactIcon, tailwindIcon, djangoIcon],
+      technologies: ["React", "TailwindCSS", "Django"],
       startDate: "17-May-2025",
       image: "rigsy",
       state: "Stopped",
@@ -60,7 +53,7 @@ const Timeline = () => {
       name: "Blog app",
       description:
         "My first full-stack app :), a blog app where you can read, comment and share posts, currently missing authentication and proper formatting",
-      technologies: [reactIcon, tailwindIcon, djangoIcon],
+      technologies: ["React", "TailwindCSS", "Django"],
       startDate: "08-April-2025",
       image: "blog",
       state: "In Progress..",
@@ -71,7 +64,7 @@ const Timeline = () => {
       name: "Matrix Component",
       description:
         "a lightweight component that displays flickering 0s and 1s, made this project while meddling with JavaScript, you can install it from npm :)",
-      technologies: [jsIcon, tailwindIcon],
+      technologies: ["JavaScript", "TailwindCSS"],
       startDate: "12-May-2025",
       image: "matrix",
       state: "Completed",
@@ -99,16 +92,18 @@ const Timeline = () => {
             </div>
             <p>{p.description}</p>
             <p className={p.state==="Stopped" ? "text-red-400" : p.state==="Completed" ? "text-emerald-400" : "text-amber-300"}>{p.state}</p>
-            <div className="flex justify-between flex-col sm:flex-row gap-4 items-start sm:items-center px-2">
-              <div className="*:w-15 flex gap-4">
+            <div className="flex justify-between flex-col sm:flex-row gap-4 items-end px-2">
+              <div className="flex gap-4 flex-wrap">
                 {p.technologies.map((t, index) => (
-                  <img key={index} src={t} />
+                  <div className="flex text-base border hover:bg-neutra-500/30 hover:border-white hover:text-white transition duration-200 **:cursor-default px-3 p-2 border-neutral-300 rounded-4xl items-center gap-2" key={index}>
+                    <span>{t}</span>
+                  </div>
                 ))}
               </div>
 
               <a
                 href={p.link}
-                className="p-2 flex text-black bg-white rounded-xl gap-2 font-bold hover:opacity-90 active:opacity-80 transition duration-200"
+                className="p-2 flex text-black bg-white rounded-xl gap-2 text-nowrap font-bold hover:opacity-90 active:opacity-80 transition duration-200"
                 target="_blank"
               >
                 <img className="w-4" src={githubIcon} />
