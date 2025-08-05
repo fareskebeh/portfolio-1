@@ -14,6 +14,7 @@ const ContactMe = () => {
     loading: false
   })
   const access_key = import.meta.env.VITE_ACCESS_KEY
+  const site_key = import.meta.env.VITE_SITE_KEY
   const [token,setToken] = useState<string|null>(null)
   useEffect(()=> {
     console.log(access_key)
@@ -88,7 +89,7 @@ const ContactMe = () => {
         </div>
         <textarea required name="message" placeholder="Your Message..." className="w-full p-2 text-white text-xl h-40 resize-none outline-none border border-neutral-800 sm:border-neutral-700 bg-neutral-900/60 rounded-xl"></textarea>
         <div className="flex flex-col items-start gap-2 mb-12">
-        <ReCAPTCHA onChange={(token)=> setToken(token)} theme="dark" sitekey={import.meta.env.VITE_SITE_KEY}/>
+        <ReCAPTCHA onChange={(token)=> setToken(token)} theme="dark" sitekey={site_key}/>
         <button type="submit" className={`py-3 px-5 cursor-pointer hover:opacity-80 transition duration-200 bg-white text-xl font-bold rounded-2xl ${output.loading ? "opacity-60 pointer-events-none px-7" : ""}`}>{output.loading ? <div className="loader"/> : "Send"}</button>
          <p className={`${output.message ? "opacity-100" : "opacity-0"} ${output.error ? "text-red-500" : "text-green-500"} transition duration-300`}>{output.message}</p>
 
