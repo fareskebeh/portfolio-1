@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import ReCAPTCHA from "react-google-recaptcha"
 
 type Output = {
@@ -16,13 +16,10 @@ const ContactMe = () => {
   const access_key = import.meta.env.VITE_ACCESS_KEY
   const site_key = import.meta.env.VITE_SITE_KEY
   const [token,setToken] = useState<string|null>(null)
-  useEffect(()=> {
-    console.log(access_key)
-  },[])
 
   const sendMessage = async(e: React.FormEvent)=> {
     e.preventDefault()
-    setOutput({...output, loading: true})
+    setOutput({...output, message:"", loading: true})
 
     
     const formData = new FormData(e.target as HTMLFormElement)
