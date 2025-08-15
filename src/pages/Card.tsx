@@ -5,6 +5,7 @@ import mailIcon from "../assets/icons/mail.svg";
 import TextType from "../bits/TextType";
 import { motion } from "framer-motion";
 import SplitText from "../bits/SplitText";
+import hashnodeIcon from "../assets/icons/hashnode.svg"
 
 type MediaLink = {
   icon: string;
@@ -43,6 +44,10 @@ const item = {
     {
       icon: mailIcon,
       link: "mailto:fares.kebbeh@gmail.com",
+    },
+    {
+      icon: hashnodeIcon,
+      link: "https://farescodes.hashnode.dev",
     },
   ];
 
