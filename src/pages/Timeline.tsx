@@ -2,10 +2,10 @@ import sword from "../assets/icons/sword.png";
 import star from "../assets/icons/star.png";
 import githubIcon from "../assets/icons/github.svg";
 import { motion } from "framer-motion";
-import goldstreet from "../assets/preview/goldstreet.png";
-import tutorme from "../assets/preview/tutorme.png";
-import rigsy from "../assets/preview/rigsy.png";
-import blog from "../assets/preview/blog.png";
+import goldstreet from "@bg/goldstreet.png";
+import tutorme from "@bg/tutorme.png";
+import rigsy from "@bg/rigsy.png";
+import blog from "@bg/blog.png";
 
 type Project = {
   name: string;
